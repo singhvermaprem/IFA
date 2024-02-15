@@ -1,0 +1,25 @@
+{
+  "name": "ifa-ecommerce",
+  "version": "1.0.0",
+  "description": "this is a website where user can purchese the cloths and accessories",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhvermaprem/ifafront.git"
+  },
+  "author": "pradhuman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhvermaprem/ifafront/issues"
+  },
+  "homepage": "https://github.com/singhvermaprem/ifafront#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}
