@@ -1,18 +1,31 @@
 import express from "express";
-import http from "http";
-
 
 const app = new express();
+const port = 3000;
 
 
-const server = http.createServer((req, res) =>
+
+app.listen(port, ()=>{
+    console.log(`server prem has been started on port ${port}`)
+});
+
+app.use(express.static('public'));
+
+app.get("/", (req, res) =>
 {
     res.render("index.ejs");
 });
 
-const PORT = process.env.PORT || 3000;
+app.get("/shop.ejs", (req, res) =>
+{
+    res.render("shop.ejs");
+});
 
-server.listen(PORT , () => console.log("prem server is running on port 3000."))
+app.get("/productDetails.ejs", (req, res) =>
+{
+    res.render("productDetails.ejs");
+});
+
 
 
 
