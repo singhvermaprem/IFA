@@ -1,27 +1,25 @@
 import express from "express";
-
-const app = new express();
-const port = 3000;
+import http from "http";
 
 
-
-app.listen(port, ()=>{
-    console.log(`server has been started on port ${port}`)
-});
-
-app.use(express.static('public'));
-
-app.get("/", (req, res) =>
+const server = http.createServer((req, res) =>
 {
     res.render("index.ejs");
 });
 
-app.get("/shop.ejs", (req, res) =>
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT , () => console.log("server is running on port 3000."))
+
+server.use(express.static('public'));
+
+
+server.get("/shop.ejs", (req, res) =>
 {
     res.render("shop.ejs");
 });
 
-app.get("/productDetails.ejs", (req, res) =>
+server.get("/productDetails.ejs", (req, res) =>
 {
     res.render("productDetails.ejs");
 });
