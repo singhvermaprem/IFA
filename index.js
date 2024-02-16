@@ -7,7 +7,7 @@ const app = new express();
 
 const server = http.createServer((req, res) =>
 {
-    res.render("C:\Web Development Project\IFA Ecommerce\views\index.ejs");
+    res.render("index.ejs");
 });
 
 const PORT = process.env.PORT || 3000;
